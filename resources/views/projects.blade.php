@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','About')
+@section('title','Projects')
 @section('content')
 
     <div class="stricky-header stricked-menu main-menu">
@@ -21,66 +21,18 @@
     <div class="projects-one">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="projects-one__single">
-                        <img src="assets/images/projects/project-1-1.jpg" alt="">
-                        <div class="projects-one__content">
-                            <h3>Harvest Innovation</h3>
-                            <a href="project-details.html" class="projects-one__button"><i
-                                    class="agrikon-icon-right-arrow"></i></a>
+                @foreach($items as $item)
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="projects-one__single">
+                            <img src="{{Voyager::image($item->image)}}" alt="">
+                            <div class="projects-one__content">
+                                <h3>{{$item->name}}</h3>
+                                <a href="{{route('project_details',$item->id)}}" class="projects-one__button"><i
+                                        class="agrikon-icon-right-arrow"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="projects-one__single">
-                        <img src="assets/images/projects/project-1-2.jpg" alt="">
-                        <div class="projects-one__content">
-                            <h3>Harvest Innovation</h3>
-                            <a href="project-details.html" class="projects-one__button"><i
-                                    class="agrikon-icon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="projects-one__single">
-                        <img src="assets/images/projects/project-1-3.jpg" alt="">
-                        <div class="projects-one__content">
-                            <h3>Harvest Innovation</h3>
-                            <a href="project-details.html" class="projects-one__button"><i
-                                    class="agrikon-icon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="projects-one__single">
-                        <img src="assets/images/projects/project-1-4.jpg" alt="">
-                        <div class="projects-one__content">
-                            <h3>Harvest Innovation</h3>
-                            <a href="project-details.html" class="projects-one__button"><i
-                                    class="agrikon-icon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="projects-one__single">
-                        <img src="assets/images/projects/project-1-5.jpg" alt="">
-                        <div class="projects-one__content">
-                            <h3>Harvest Innovation</h3>
-                            <a href="project-details.html" class="projects-one__button"><i
-                                    class="agrikon-icon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="projects-one__single">
-                        <img src="assets/images/projects/project-1-6.jpg" alt="">
-                        <div class="projects-one__content">
-                            <h3>Harvest Innovation</h3>
-                            <a href="project-details.html" class="projects-one__button"><i
-                                    class="agrikon-icon-right-arrow"></i></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

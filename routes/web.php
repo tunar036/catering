@@ -27,7 +27,7 @@ Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/services',[ServiceController::class,'index'])->name('services');
 Route::get('/service_details/{id}',[ServiceController::class,'service_details'])->name('service_details');
 Route::get('/projects',[ProjectController::class,'index'])->name('projects');
-
+Route::get('/project_details/{id}',[ProjectController::class,'project_details'])->name('project_details');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

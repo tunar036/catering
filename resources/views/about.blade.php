@@ -12,11 +12,11 @@
 
         <div class="container">
             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li>/</li>
-                <li><span>About</span></li>
+                <li><span>Haqqımızda</span></li>
             </ul>
-            <h2>About Us</h2>
+            <h2>Haqqımızda</h2>
         </div>
     </section>
 
@@ -25,18 +25,18 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-three__image">
-                        <img src="assets/images/resources/about-3-2.jpg" alt="">
+                        <img src="{{Voyager::image($about->image)}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-three__content">
                         <div class="block-title">
-                            <div class="block-title__image"></div>
-                            <p>Get to know us</p>
-                            <h3>30 Years Agriculture
-                                Experience</h3>
+{{--                            <div class="block-title__image"></div>--}}
+{{--                            <p>Get to know us</p>--}}
+                            <h3>{{$about->title}}</h3>
                         </div>
-                        <ul class="about-three__list list-unstyled">
+                        {!! $about->text !!}
+{{--                        <ul class="about-three__list list-unstyled">
                             <li>
                                 <i class="fa fa-check-circle"></i>
                                 Suspe ndisse suscipit sagittis
@@ -62,7 +62,7 @@
                         <div class="about-three__signs">
                             <img src="assets/images/resources/about-3-1.png" alt="">
                             <img src="assets/images/resources/sign-1-1.png" alt="">
-                        </div>
+                        </div>--}}
                     </div>
                 </div>
             </div>

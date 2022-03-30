@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\AboutController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,10 +21,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
 
+
+Route::get('/about',[AboutController::class,'index'])->name('about');
 Route::get('/services',[ServiceController::class,'index'])->name('services');
 Route::get('/service_details/{id}',[ServiceController::class,'service_details'])->name('service_details');
 Route::get('/projects',[ProjectController::class,'index'])->name('projects');

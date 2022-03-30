@@ -11,9 +11,9 @@
 
         <div class="container">
             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Ana səhifə</a></li>
                 <li>/</li>
-                <li><span>Projects</span></li>
+                <li><span>Portfolio</span></li>
             </ul>
             <h2>Projects</h2>
         </div>
@@ -33,6 +33,9 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                {{ $items->links('pagination::bootstrap-4') }}
             </div>
         </div>
     </div>

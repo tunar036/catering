@@ -2,7 +2,7 @@
 <nav class="main-menu">
     <div class="container">
         <div class="logo-box">
-            <a href="index.html" aria-label="logo image"><img src="assets/images/logo-dark.png" width="153" alt=""></a>
+            <a href="/" aria-label="logo image"><img src="assets/images/logo-dark.png" width="153" alt=""></a>
             <span class="fa fa-bars mobile-nav__toggler"></span>
         </div>
         <ul class="main-menu__list">

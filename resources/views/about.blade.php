@@ -12,7 +12,7 @@
 
         <div class="container">
             <ul class="thm-breadcrumb list-unstyled">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">Ana səhifə</a></li>
                 <li>/</li>
                 <li><span>Haqqımızda</span></li>
             </ul>
